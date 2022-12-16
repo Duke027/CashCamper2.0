@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
 
   currentNumber = '0';
-  firstOperand = any;
-  operator = any;
+  firstOperand:any;
+  operator:any;
   waitForSecondNumber = false;
 
   constructor() { }
@@ -46,6 +46,8 @@ export class CalculatorComponent implements OnInit {
       return this.firstOperand /= secondOp;
       case '=':
       return secondOp;
+      case '%':
+      return this.firstOperand %= secondOp;
     }
   }
   public getOperation(op: string){

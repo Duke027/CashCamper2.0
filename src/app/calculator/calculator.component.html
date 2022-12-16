@@ -1,13 +1,13 @@
-<div class="calculator">
 
-  <input type="text" class="calculator-screen" value="0" disabled />
+<div class="calculator">
+  <input type="text" class="calculator-screen" value={{currentNumber}} disabled />
 
   <div class="calculator-keys">
 
-    <button type="button" class="operator" value="+">+</button>
-    <button type="button" class="operator" value="-">-</button>
-    <button type="button" class="operator" value="*">&times;</button>
-    <button type="button" class="operator" value="/">&divide;</button>
+    <button type="button" class="operator" (click)="getOperation('+')"value="+">+</button>
+    <button type="button" class="operator" (click)="getOperation('-')"value="-">-</button>
+    <button type="button" class="operator" (click)="getOperation('*')"value="*">&times;</button>
+    <button type="button" class="operator" (click)="getOperation('/')"value="/">&divide;</button>
 
     <button type="button" (click) = "getNumber('7')" value="7">7</button>
     <button type="button" (click) = "getNumber('8')" value="8">8</button>
@@ -25,10 +25,12 @@
 
 
     <button type="button" (click) = "getNumber('0')" value="0">0</button>
-    <button type="button" class="decimal" value=".">.</button>
-    <button type="button" class="all-clear" value="all-clear">AC</button>
 
-    <button type="button" class="equal-sign" value="=">=</button>
+    <button type="button" class="operator" (click)="getOperation('%')" value="%">%</button>
+    <button type="button" class="decimal" (click)="getDecimal()"value=".">.</button>
+    <button type="button" class="all-clear" (click)="clear()" value="all-clear">AC</button>
+
+    <button type="button" class="equal-sign" (click)="getOperation('=')" value="=">=</button>
 
   </div>
 </div>

@@ -63,9 +63,22 @@ button:hover {
   background-color: #4e9ed4;
 }
 
+.percentage-sign {
+  background-color: #2e86c0;
+  border-color: #337cac;
+  color: #fff;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+}
+
+.percentage-sign:hover {
+  background-color: #4e9ed4;
+}
+
 .calculator-keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding: 20px;
 }
+
